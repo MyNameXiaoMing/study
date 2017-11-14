@@ -1,0 +1,42 @@
+a{
+    text-decoration:none;
+}
+.AllWrapInside{
+    margin:0 auto;width:780px;line-height: 30px;text-align:right;padding-right:10px;
+    .c999{
+        a{
+            color:#999;font-size: 14px;
+        }
+    }
+}
+
+.c777{
+    label{
+        font-size: 14px;
+        a{
+            text-decoration:underline;
+        }
+    }
+}
+
+.actbtn{
+    background: url('../img/scn04.png') no-repeat 0 -198px;
+    width: 89px;height: 38px;
+    text-indent: 0;color:#fff;
+    font-weight: bold;cursor:pointer;
+    border:none;
+}
+b{
+    font-size: 12px;
+}
+.box10{
+    height: 10px;clear:both;overflow: hidden;
+}
+.returnlogin{
+    display: inline-block;
+    width: 91px;height: 32px;
+    line-height: 30px;text-align: center;
+    color:#c66;font-size: 14px;
+    font-weight: 700;
+    background: url("../img/loginbg.png")no-repeat;
+}
