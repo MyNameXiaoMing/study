@@ -1,0 +1,90 @@
+a {
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.AllWrapInside {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.AllWrapInside .loinform .RegisterWrap {
+  margin: 0;
+}
+
+.AllWrapInside .loinform .RegisterWrap .form {
+  padding: 0px;
+  border: 0;
+}
+
+.login_box {
+  width: 85%;
+  background: #fafafa;
+  border: 1px solid #eee;
+  box-shadow: 3px 3px #f5f5f5;
+}
+
+.login_box table {
+  margin: 0 auto;
+}
+
+.x-input {
+  width: 220px;
+  border: 1px solid #ccc;
+  padding: 3px 5px;
+}
+
+#verifyTr input {
+  width: 65px;
+}
+
+#verifyTr .verifyCode {
+  display: block;
+}
+
+#verifyTr .verifyCode img {
+  vertical-align: middle;
+  padding: 5px 0;
+  background: #eee;
+}
+
+#verifyTr .verifyCode a {
+  color: #666;
+}
+
+th {
+  text-align: right;
+  color: #666;
+  width: 60px;
+  font-size: 14px;
+  vertical-align: middle;
+  font-weight: 100;
+}
+
+#fast_login {
+  background: url("../img/scn04.png") no-repeat 0 -198px;
+  width: 89px;
+  height: 38px;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.c777 {
+  font-size: 14px;
+  color: #777;
+}
+
+#fast_login_reg {
+  color: #f60;
+  text-decoration: underline;
+}
+
+.login-IconList {
+  float: left;
+  padding-top: 5px;
+  width: 115px;
+  height: 20px;
+  overflow: visible;
+}
