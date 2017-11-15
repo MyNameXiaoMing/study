@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <title>用户注册</title>
     <link rel="stylesheet" type="text/css" href="../css/reg.css" />
+    <script src="../js/jquery-3.2.1.js"></script>
+    <script src="../js/reg.js"></script>
+
 </head>
 <body>
     <div class="AllWrapInside">
@@ -25,29 +28,34 @@
                                         <tbody>
                                             <tr>
                                                 <th></th>
-                                                <td style="height:35px;line-height:25px"></td>
+                                                <td style="height:35px;line-height:25px">
+                                                    <input type="hidden" id="for_vali">
+                                                    <span class="valierror" id="valierror" style="margin:0;display:none;"></span>
+                                                    </td>
                                             </tr>
                                             <tr>
                                                 <th>用户名：</th>
                                                 <td><input type="text" class="x-input" name="uname" id="reg_user" maxlength="50"
-                                                value="邮箱/手机" style="width:220px;border:1px solid #ccc;padding:3px 5px;color:#aaa"/></td>
+                                                value="邮箱/手机" onfocus="rmDefault(this)" onblur="nameCheck(this)"; style="width:220px;border:1px solid #ccc;padding:3px 5px;color:#aaa"/>
                                                 <span></span>
+                                                </td>
+                                                
                                             </tr>
                                             <tr>
                                                 <th style="padding-top:15px">密码：</th>
-                                                <td style="padding-top:15px"><input type="text" class="x-input" name="passwd" type="password" id="reg_password" style="width:220px;border:1px solid #ccc;padding:3px 5px"/></td>
+                                                <td style="padding-top:15px"><input type="text" class="x-input" onblur="verifyPasswd('reg_passwd')" name="passwd" type="password"  id="reg_password" style="width:220px;border:1px solid #ccc;padding:3px 5px"/></td>
                                                 <span passwd_err_msg></span>
                                             </tr>
                                             <tr>
                                                 <th style="padding-top:15px">确认密码：</th>
-                                                <td style="padding-top:15px"><input type="text" class="x-input" name="passwd_r" type="password" id="reg_password" style="width: 220px;border:1px solid #ccc;padding:3px 5px;"/></td>
+                                                <td style="padding-top:15px"><input type="text" class="x-input" name="passwd_r" type="password" id="reg_password_r"  onfocus="hiddenError('valierror');" onblur="verifyPasswdr('reg_passwd', 'reg_passwd_r')"; style="width: 220px;border:1px solid #ccc;padding:3px 5px;"/></td>
                                                 <span></span>
                                             </tr>
                                             <tr>
                                                 <th style="padding-top:15px">验证码：</th>
                                                 <td style="padding-top:15px">
-                                                    <input type="text" class="x-input" id="iptsingup"  style="width: 65px;" size="8"/>
-                                                    <span class="verifycode"></span>
+                                                    <input autocomplete="off" class="x-input " style="width:65px" size="8" type="text" required="true" name="signupverifycode" onblur="validate('yzm')" id="iptsingup" vtype="digits">
+                                                    <span id="verifyCode" style="width:35px;height:20px"></span><a href="javascript:void(0)" style="color:#666;font-size:12px">换个图片</a> 
                                                 </td>
                                             </tr>
                                             <tr>
@@ -68,7 +76,7 @@
                                             <tr>
                                                 <th></th>
                                                 <td style="padding-top:10px">
-                                                    <input class="actbtn" type="submit" class="actbtn" value="注册新用户"/>
+                                                    <input class="actbtn" type="submit" class="actbtn" onclick="return verfiySignupForm()"; value="注册新用户"/>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -95,6 +103,27 @@
             </div>
         </div>
     </form>
+
+ <script>
+    // 验证码生成
+function createCode(){  
+     code = "";   
+     var codeLength = 4;//验证码的长度  
+     var verifyCode = document.getElementById("verifyCode");   
+     var random = new Array(0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R',  
+     'S','T','U','V','W','X','Y','Z');//随机数  
+     for(var i = 0; i < codeLength; i++) {//循环操作  
+        var index = Math.floor(Math.random()*36);//取得随机数的索引（0~35）  
+        code += random[index];//根据索引取得随机数加到code上  
+       
+    }  
     
+    verifyCode.innerHTML = code;//把code值赋给验证码 
+
+}
+createCode();
+</script>
+
+
 </body>
 </html>

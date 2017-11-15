@@ -55,3 +55,17 @@ b {
   font-weight: 700;
   background: url("../img/loginbg.png") no-repeat;
 }
+#valierror{
+  width: 174px;
+  
+  font-size: 12px;
+  padding: 3px 5px 3px 21px;
+  display: inline;
+  height: 20px;
+  line-height: 20px;
+  border:1px solid #E6594E;
+  white-space: nowrap;
+  text-align: left;
+  color:#E6594E;
+  background: #FCEAE8 url(../img/stop.gif) no-repeat 3px;
+}
