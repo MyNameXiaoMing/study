@@ -4,17 +4,30 @@
     <meta charset="UTF-8" />
     <title>首页</title>
     <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery-EdCarousel.css" />
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/jquery-EdCarousel.js"></script>
     <script type="text/javascript">
-       
+       jQuery(function($){
+            $('.focus').EdCarousel({
+                img:["img/jd1.jpg","img/jd2.jpg","img/jd3.jpg","img/jd4.jpg"],
+                height:550,
+                width:1600,
+                // type:'horizontal'
+                
+            })
+       })
     </script>
 </head>
 <body>
     <div class="top">
-        <a href="" target="">
-            <img src="img/dt.jpg"/>
-        </a>
+        <div style="width:1920px;position: absolute;right:50%">
+            <a href="" target="">
+                <img src="img/dt.jpg" style="position: absolute;left: 50%;"/>
+            </a>
+        </div>
+        
     </div>
     <!-- 页面第二块 头部导航栏-->
     <div style="background: #eee;border-bottom:1px solid #e5e5e5">
@@ -93,20 +106,21 @@
                 <li class="lf_cat">所有商品分类</li>
                 <li class="tnav">
                     <a href="">首页</a>
-                    <a href="">男子运动</a>
-                    <a href="">女子运动</a>
-                    <a href="">儿童</a>
+                    <a href="" id="nav_nanzi">男子运动</a>
+                    <a href="" id="nvzi">女子运动</a>
+                    <a href="" id="nav_ertong">儿童</a>
                     <a href="">男鞋</a>
                     <a href="">户外</a>
                     <span class="gzwx">
-                        <a href="">
-                            <img src="img/guanzhuweixin.png" height="34" width="165" alt="" />
+                        <a href="" style="background:url('img/guanzhuweixin.png');">
+                            <img src="img/wx2.png" height="165" width="165" alt="" />
                         </a>
                     </span>
                 </li>
             </ul>
         </div>
     </div>
+
     <!-- 页面第五块 二级菜单分类-->
     <div class="category-menu-nav">
         <ul class="menu-nav-container clearfix" id="leftcat_ctl_pop"style="">
@@ -156,6 +170,574 @@
                 <i class="menu-nav-arrow"></i>
             </li>
         </ul>
+    </div>
+    
+    <div id="nav_nanzi_pop" class="wnav_pop">
+        <ul class="lv15_cats clfix">
+            <li>
+                <h4>运动鞋</h4>
+                <p>
+                    <a class="cur" target="_blank" href="">休闲鞋</a><br> 
+                    <a target="_blank" href="">板鞋</a><br> 
+                    <a target="_blank" href="">跑步鞋</a><br> 
+                    <a class="cur" target="_blank" href="">帆布鞋</a><br> 
+                    <a class="cur" target="_blank" href="">拖鞋</a><br> 
+                    <a target="_blank" href="">篮球鞋</a><br> 
+                    <a target="_blank" href="">足球鞋</a><br> 
+                    <a target="_blank" href="">赛车鞋</a><br> 
+                    <a target="_blank" href="">网球鞋</a><br> 
+                    <a target="_blank" href="">溯溪鞋</a>
+                </p>
+            </li>
+            <li>
+                <h4>服装</h4>
+                <p>
+                    <a target="_blank" href="">短袖T恤</a><br> 
+                    <a target="_blank" href="">短袖POLO</a><br> 
+                    <a target="_blank" href="">运动长裤</a><br> 
+                    <a target="_blank" href="">运动短裤</a><br> 
+                    <a target="_blank" href="">休闲裤</a><br> 
+                    <a target="_blank" href="">卫衣</a><br> 
+                    <a target="_blank" href="">外套</a><br> 
+                </p>
+            </li>
+            <li class="brands clfix"> 
+                <h4>品牌推荐</h4> 
+                <a href=""><img src="img/nike.jpg" height="35" width="69" alt="" /></a>
+                <a href=""><img src="img/adi.jpg" height="35" width="69" alt="" /></a>
+                <a href=""><img src="img/neo.jpg" height="35" width="69" alt="" /></a>
+                <a href=""><img src="img/ori.png" height="35" width="69" alt="" /></a>
+                <a href=""><img src="img/nb.jpg" height="35" width="69" alt="" /></a>
+                <a href=""><img src="img/skq1.jpg" height="35" width="69" alt="" /></a>
+                <a href=""><img src="img/puma.jpg" height="35" width="69" alt="" /></a>
+                <a href=""><img src="img/kw.jpg" height="35" width="69" alt="" /></a>
+                <a href=""><img src="img/dc.jpg" height="90" width="1920" alt="" /></a>
+                <a href=""><img src="img/vans.jpg" height="35" width="69" alt="" /></a>
+                <a href=""><img src="img/vans.jpg" height="35" width="69" alt="" /></a>
+                <a href=""><img src="img/rb.jpg" height="35" width="69" alt="" /></a>
+                <a href=""><img src="img/anta.jpg" height="35" width="69" alt="" /></a>
+            </li>
+        </ul>
+    </div>
+    
+    <div id="nav_nvzi_pop" class="wnav_pop">
+        <ul class="lv15_cats clfix">
+            <li>
+                <h4>运动鞋</h4>
+                <p>
+                    <a class="cur" target="_blank" href="">休闲鞋</a><br> 
+                    <a target="_blank" href="">板鞋</a><br> 
+                    <a target="_blank" href="">跑步鞋</a><br> 
+                    <a class="cur" target="_blank" href="">帆布鞋</a><br> 
+                    <a class="cur" target="_blank" href="">拖鞋</a><br> 
+                    <a target="_blank" href="">网球鞋</a><br> 
+                    <a target="_blank" href="">健步鞋</a><br />
+                </p>
+            </li>
+            <li>
+                <h4>服装</h4>
+                <p>
+                    <a target="_blank" href="">短袖T恤</a><br> 
+                    <a target="_blank" href="">短袖POLO</a><br> 
+                    <a target="_blank" href="">紧身裤</a><br> 
+                    <a target="_blank" href="">运动短裤</a><br> 
+                    <a target="_blank" href="">运动裙</a><br> 
+                    <a target="_blank" href="">胸衣</a><br>
+                    <a target="_blank" href="">卫衣</a><br>  
+                    <a target="_blank" href="">外套</a><br> 
+                </p>
+            </li>
+            <li class="brands clfix"> 
+                <h4>品牌推荐</h4> 
+                <a href=""><img src="img/nike.jpg" height="35" width="69" alt="" /></a>
+                <a href=""><img src="img/adi.jpg" height="35" width="69" alt="" /></a>
+                <a href=""><img src="img/neo.jpg" height="35" width="69" alt="" /></a>
+                <a href=""><img src="img/ori.png" height="35" width="69" alt="" /></a>
+                <a href=""><img src="img/nb.jpg" height="35" width="69" alt="" /></a>
+                <a href=""><img src="img/skq1.jpg" height="35" width="69" alt="" /></a>
+                <a href=""><img src="img/puma.jpg" height="35" width="69" alt="" /></a>
+                <a href=""><img src="img/kw.jpg" height="35" width="69" alt="" /></a>
+                <a href=""><img src="img/dc.jpg" height="90" width="1920" alt="" /></a>
+                <a href=""><img src="img/vans.jpg" height="35" width="69" alt="" /></a>
+                <a href=""><img src="img/vans.jpg" height="35" width="69" alt="" /></a>
+                <a href=""><img src="img/rb.jpg" height="35" width="69" alt="" /></a>
+                <a href=""><img src="img/anta.jpg" height="35" width="69" alt="" /></a>
+            </li>
+        </ul>
+    </div>
+    
+    <div id="nav_ertong_pop" class="wnav_pop">
+        <ul class="lv15_cats clfix">
+            <li>
+                <h4>男童鞋</h4>
+                <p>
+                    <a target="_blank" href="">婴童(0-4岁)</a><br> 
+                    <a target="_blank" href="">小童(4-10岁)</a><br> 
+                    <a target="_blank" href="">大童(10-13岁)</a><br />
+                </p>
+            </li>
+            <li>
+                <h4>服装</h4>
+                <p>
+                    <a target="_blank" href="">套装</a><br> 
+                    <a target="_blank" href="">裤子</a><br> 
+                    <a target="_blank" href="">T恤</a><br> 
+                    <a target="_blank" href="">外套</a><br> 
+                </p>
+            </li>
+            <li style="float: right;margin-top: -105px;" class="brands clfix"> 
+                <h4>品牌推荐</h4> 
+                <a href=""><img src="img/nike.jpg" height="35" width="69" alt="" /></a>
+                <a href=""><img src="img/adi.jpg" height="35" width="69" alt="" /></a>
+                <a href=""><img src="img/neo.jpg" height="35" width="69" alt="" /></a>
+                <a href=""><img src="img/ori.png" height="35" width="69" alt="" /></a>
+            </li>
+            <li>
+                <h4>女童鞋</h4>
+                <p>
+                    <a href="">婴童(0-4岁)</a><br> 
+                    <a target="_blank" href="">小童(4-10岁)</a><br> 
+                    <a target="_blank" href="">大童(10-13岁)</a><br />
+                </p>
+            </li>
+        </ul>
+    </div>
+
+
+    <div id="cat_ydxie_pop" class="catgory-menu-pannel category-1-pannel">
+        <div class="category-sub-pannel">
+            <b class="sub-pannel-arrow"></b>
+            <div class="sub-pannel-ctn two-grid-type1">
+                <div>
+                    <h3 class="category-title category-ydnx">
+                        <a href="">运动男鞋</a>
+                        <a href="">更多</a>
+                    </h3>
+                    <p class="category-label-list">
+                        <a href="">休闲鞋</a>
+                        <a href="">训练鞋</a>
+                        <a href="">帆布鞋</a>
+                        <a href="">板鞋</a>
+                        <a href="">网球鞋</a>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="category-title category-nvx">
+                        <a href="">运动女鞋</a>
+                        <a href="">更多</a>
+                    </h3>
+                    <p class="category-label-list">
+                        <a href="">休闲鞋</a>
+                        <a href="">训练鞋</a>
+                        <a href="">健步鞋</a>
+                        <a href="">帆布鞋</a>
+                        <a href="">板鞋</a>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="category-title category-nobg">
+                        <a href="">搜索热词</a>
+                    </h3>
+                    <p class="category-label-list">
+                        <a href="">2017新品</a>
+                        <a href="">小白鞋</a>
+                        <a href="">情侣款</a>
+                        <a href="">内增高</a>
+                        <a href="">复古鞋</a>
+                        <a href="">匡威帆布鞋</a>
+                        <a href="">三叶草</a>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="category-title category-nobg">
+                        <a href="">热门系列</a>
+                    </h3>
+                    <p class="category-label-list">
+                        <a href="">新百伦574</a>
+                        <a href="">air max</a>
+                        <a href="">三叶草ZX</a>
+                        <a href="">All star</a>
+                        <a href="">开口笑</a>
+                        <a href="">阿甘鞋</a>
+                        <a href="">996系列</a>
+                        <a href="">彪马休闲鞋</a>
+                        <a href="">匡威CONS</a>
+                        <a href="">ROSHERUN</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="cat_ydfu_pop" class="catgory-menu-pannel category-2-pannel">
+        <div class="category-sub-pannel">
+            <b class="sub-pannel-arrow"></b>
+            <div class="sub-pannel-ctn three-grid">
+                <div>
+                    <h3 class="category-title category-nzydf">
+                        <a href="">男子运动服</a>
+                        <a href="">更多</a>
+                    </h3>
+                    <p class="category-label-list">
+                        <a href="">长袖T恤</a>
+                        <a href="">卫衣</a>
+                        <a href="">夹克</a>
+                        <a href="">运动长裤</a>
+                        <a href="">外套</a>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="category-title category-nvzydf">
+                        <a href="">女子运动服</a>
+                        <a href="">更多</a>
+                    </h3>
+                    <p class="category-label-list">
+                        <a href="">长袖T恤</a>
+                        <a href="">卫衣</a>
+                        <a href="">运动长裤</a>
+                        <a href="">外套</a>
+                        <a href="">夹克</a>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="category-title category-nobg">
+                        <a href="">热门搜索</a>
+                    </h3>
+                    <p class="category-label-list">
+                        <a href="">鹿晗同款</a>
+                        <a href="">2017新品</a>
+                        <a href="">彭于晏同款</a>
+                        <a href="">棒球服</a>
+                        <a href="">三条纹</a>
+                        <a href="">NEO服装</a>
+                        <a href="">三叶草</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="cat_paobu_pop" class="catgory-menu-pannel category-3-pannel">
+        <div class="category-sub-pannel">
+            <b class="sub-pannel-arrow"></b>
+            <div class="sub-pannel-ctn two-grid-type1">
+                <div>
+                    <h3 class="category-title category-ydnx">
+                        <a href="">运动男鞋</a>
+                        <a href="">更多</a>
+                    </h3>
+                    <p class="category-label-list">
+                        <a href="">休闲鞋</a>
+                        <a href="">训练鞋</a>
+                        <a href="">帆布鞋</a>
+                        <a href="">板鞋</a>
+                        <a href="">网球鞋</a>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="category-title category-nvx">
+                        <a href="">运动女鞋</a>
+                        <a href="">更多</a>
+                    </h3>
+                    <p class="category-label-list">
+                        <a href="">休闲鞋</a>
+                        <a href="">训练鞋</a>
+                        <a href="">健步鞋</a>
+                        <a href="">帆布鞋</a>
+                        <a href="">板鞋</a>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="category-title category-nobg">
+                        <a href="">搜索热词</a>
+                    </h3>
+                    <p class="category-label-list">
+                        <a href="">2017新品</a>
+                        <a href="">小白鞋</a>
+                        <a href="">情侣款</a>
+                        <a href="">内增高</a>
+                        <a href="">复古鞋</a>
+                        <a href="">匡威帆布鞋</a>
+                        <a href="">三叶草</a>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="category-title category-nobg">
+                        <a href="">热门系列</a>
+                    </h3>
+                    <p class="category-label-list">
+                        <a href="">新百伦574</a>
+                        <a href="">air max</a>
+                        <a href="">三叶草ZX</a>
+                        <a href="">All star</a>
+                        <a href="">开口笑</a>
+                        <a href="">阿甘鞋</a>
+                        <a href="">996系列</a>
+                        <a href="">彪马休闲鞋</a>
+                        <a href="">匡威CONS</a>
+                        <a href="">ROSHERUN</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="cat_lanqiu_pop" class="catgory-menu-pannel category-4-pannel">
+        <div class="category-sub-pannel">
+            <b class="sub-pannel-arrow"></b>
+            <div class="sub-pannel-ctn two-grid-type1">
+                <div>
+                    <h3 class="category-title category-ydnx">
+                        <a href="">运动男鞋</a>
+                        <a href="">更多</a>
+                    </h3>
+                    <p class="category-label-list">
+                        <a href="">休闲鞋</a>
+                        <a href="">训练鞋</a>
+                        <a href="">帆布鞋</a>
+                        <a href="">板鞋</a>
+                        <a href="">网球鞋</a>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="category-title category-nvx">
+                        <a href="">运动女鞋</a>
+                        <a href="">更多</a>
+                    </h3>
+                    <p class="category-label-list">
+                        <a href="">休闲鞋</a>
+                        <a href="">训练鞋</a>
+                        <a href="">健步鞋</a>
+                        <a href="">帆布鞋</a>
+                        <a href="">板鞋</a>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="category-title category-nobg">
+                        <a href="">搜索热词</a>
+                    </h3>
+                    <p class="category-label-list">
+                        <a href="">2017新品</a>
+                        <a href="">小白鞋</a>
+                        <a href="">情侣款</a>
+                        <a href="">内增高</a>
+                        <a href="">复古鞋</a>
+                        <a href="">匡威帆布鞋</a>
+                        <a href="">三叶草</a>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="category-title category-nobg">
+                        <a href="">热门系列</a>
+                    </h3>
+                    <p class="category-label-list">
+                        <a href="">新百伦574</a>
+                        <a href="">air max</a>
+                        <a href="">三叶草ZX</a>
+                        <a href="">All star</a>
+                        <a href="">开口笑</a>
+                        <a href="">阿甘鞋</a>
+                        <a href="">996系列</a>
+                        <a href="">彪马休闲鞋</a>
+                        <a href="">匡威CONS</a>
+                        <a href="">ROSHERUN</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="cat_zuqiu_pop" class="catgory-menu-pannel category-5-pannel">
+        <div class="category-sub-pannel">
+            <b class="sub-pannel-arrow"></b>
+            <div class="sub-pannel-ctn two-grid-type1">
+                <div>
+                    <h3 class="category-title category-ydnx">
+                        <a href="">运动男鞋</a>
+                        <a href="">更多</a>
+                    </h3>
+                    <p class="category-label-list">
+                        <a href="">休闲鞋</a>
+                        <a href="">训练鞋</a>
+                        <a href="">帆布鞋</a>
+                        <a href="">板鞋</a>
+                        <a href="">网球鞋</a>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="category-title category-nvx">
+                        <a href="">运动女鞋</a>
+                        <a href="">更多</a>
+                    </h3>
+                    <p class="category-label-list">
+                        <a href="">休闲鞋</a>
+                        <a href="">训练鞋</a>
+                        <a href="">健步鞋</a>
+                        <a href="">帆布鞋</a>
+                        <a href="">板鞋</a>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="category-title category-nobg">
+                        <a href="">搜索热词</a>
+                    </h3>
+                    <p class="category-label-list">
+                        <a href="">2017新品</a>
+                        <a href="">小白鞋</a>
+                        <a href="">情侣款</a>
+                        <a href="">内增高</a>
+                        <a href="">复古鞋</a>
+                        <a href="">匡威帆布鞋</a>
+                        <a href="">三叶草</a>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="category-title category-nobg">
+                        <a href="">热门系列</a>
+                    </h3>
+                    <p class="category-label-list">
+                        <a href="">新百伦574</a>
+                        <a href="">air max</a>
+                        <a href="">三叶草ZX</a>
+                        <a href="">All star</a>
+                        <a href="">开口笑</a>
+                        <a href="">阿甘鞋</a>
+                        <a href="">996系列</a>
+                        <a href="">彪马休闲鞋</a>
+                        <a href="">匡威CONS</a>
+                        <a href="">ROSHERUN</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="cat_baobao_pop" class="catgory-menu-pannel category-6-pannel">
+        <div class="category-sub-pannel">
+            <b class="sub-pannel-arrow"></b>
+            <div class="sub-pannel-ctn two-grid-type1">
+                <div>
+                    <h3 class="category-title category-ydnx">
+                        <a href="">运动男鞋</a>
+                        <a href="">更多</a>
+                    </h3>
+                    <p class="category-label-list">
+                        <a href="">休闲鞋</a>
+                        <a href="">训练鞋</a>
+                        <a href="">帆布鞋</a>
+                        <a href="">板鞋</a>
+                        <a href="">网球鞋</a>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="category-title category-nvx">
+                        <a href="">运动女鞋</a>
+                        <a href="">更多</a>
+                    </h3>
+                    <p class="category-label-list">
+                        <a href="">休闲鞋</a>
+                        <a href="">训练鞋</a>
+                        <a href="">健步鞋</a>
+                        <a href="">帆布鞋</a>
+                        <a href="">板鞋</a>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="category-title category-nobg">
+                        <a href="">搜索热词</a>
+                    </h3>
+                    <p class="category-label-list">
+                        <a href="">2017新品</a>
+                        <a href="">小白鞋</a>
+                        <a href="">情侣款</a>
+                        <a href="">内增高</a>
+                        <a href="">复古鞋</a>
+                        <a href="">匡威帆布鞋</a>
+                        <a href="">三叶草</a>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="category-title category-nobg">
+                        <a href="">热门系列</a>
+                    </h3>
+                    <p class="category-label-list">
+                        <a href="">新百伦574</a>
+                        <a href="">air max</a>
+                        <a href="">三叶草ZX</a>
+                        <a href="">All star</a>
+                        <a href="">开口笑</a>
+                        <a href="">阿甘鞋</a>
+                        <a href="">996系列</a>
+                        <a href="">彪马休闲鞋</a>
+                        <a href="">匡威CONS</a>
+                        <a href="">ROSHERUN</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="cat_huwai_pop" class="catgory-menu-pannel category-7-pannel">
+        <div class="category-sub-pannel">
+            <b class="sub-pannel-arrow"></b>
+            <div class="sub-pannel-ctn two-grid-type1">
+                <div>
+                    <h3 class="category-title category-ydnx">
+                        <a href="">运动男鞋</a>
+                        <a href="">更多</a>
+                    </h3>
+                    <p class="category-label-list">
+                        <a href="">休闲鞋</a>
+                        <a href="">训练鞋</a>
+                        <a href="">帆布鞋</a>
+                        <a href="">板鞋</a>
+                        <a href="">网球鞋</a>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="category-title category-nvx">
+                        <a href="">运动女鞋</a>
+                        <a href="">更多</a>
+                    </h3>
+                    <p class="category-label-list">
+                        <a href="">休闲鞋</a>
+                        <a href="">训练鞋</a>
+                        <a href="">健步鞋</a>
+                        <a href="">帆布鞋</a>
+                        <a href="">板鞋</a>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="category-title category-nobg">
+                        <a href="">搜索热词</a>
+                    </h3>
+                    <p class="category-label-list">
+                        <a href="">2017新品</a>
+                        <a href="">小白鞋</a>
+                        <a href="">情侣款</a>
+                        <a href="">内增高</a>
+                        <a href="">复古鞋</a>
+                        <a href="">匡威帆布鞋</a>
+                        <a href="">三叶草</a>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="category-title category-nobg">
+                        <a href="">热门系列</a>
+                    </h3>
+                    <p class="category-label-list">
+                        <a href="">新百伦574</a>
+                        <a href="">air max</a>
+                        <a href="">三叶草ZX</a>
+                        <a href="">All star</a>
+                        <a href="">开口笑</a>
+                        <a href="">阿甘鞋</a>
+                        <a href="">996系列</a>
+                        <a href="">彪马休闲鞋</a>
+                        <a href="">匡威CONS</a>
+                        <a href="">ROSHERUN</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 轮播图 -->
+    <div class="focus">
+        <ul></ul>
     </div>
     <!-- 页面侧面栏 -->
     <div class="s-rbar-outer">

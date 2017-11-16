@@ -10,6 +10,8 @@ body {
   overflow-x: hidden;
   height: 100%;
   position: relative;
+  font-size: 12px;
+  color: #333;
 }
 
 a {
@@ -293,6 +295,7 @@ ul, li {
   height: 34px;
   width: 100%;
   background: #A21F25;
+  position: relative;
 }
 
 .nav_head .nav_box {
@@ -353,9 +356,25 @@ ul, li {
 }
 
 .nav_head .nav_box ul .tnav .gzwx a {
+  width: 165px;
   border: none;
+  display: block;
+  float: left;
+  height: 34px;
+  line-height: 34px;
   margin: 0;
   padding: 0;
+}
+
+.nav_head .nav_box ul .tnav .gzwx a img {
+  display: none;
+  position: absolute;
+  top: 34px;
+  z-index: 33;
+}
+
+.nav_head .nav_box ul .tnav .gzwx a:hover img {
+  display: block;
 }
 
 .category-menu-nav {
@@ -364,7 +383,7 @@ ul, li {
   top: 227px;
   left: 125px;
   z-index: 9999;
-  visibility: hidden;
+  display: none;
 }
 
 .category-menu-nav .menu-nav-container {
@@ -389,6 +408,10 @@ ul, li {
 .category-menu-nav .menu-nav-container .menu-nav a {
   font-size: 12px;
   color: #fff;
+}
+
+.category-menu-nav .menu-nav-container .menu-nav:hover {
+  background: #a90000;
 }
 
 .category-menu-nav .menu-nav-container #cat_ydxie s {
@@ -432,6 +455,205 @@ ul, li {
 
 .category-menu-nav .menu-nav-container #cat_tongxie s {
   background: url("../img/navcats_icon.png") no-repeat 12px -4px;
+}
+
+.wnav_pop {
+  width: 668px;
+  text-align: left;
+  background: #fff;
+  box-shadow: 0 0 3px #ccc;
+  padding: 5px 0;
+  position: absolute;
+  display: none;
+  z-index: -9;
+}
+
+.wnav_pop li {
+  display: block;
+  float: left;
+  width: 140px;
+  padding-left: 22px;
+}
+
+.wnav_pop li h4 {
+  font-size: 18px;
+  display: block;
+  padding-bottom: 7px;
+  height: 24px;
+  left: 24px;
+  color: #2a2a2a;
+  margin: 0;
+}
+
+.wnav_pop li a {
+  display: inline-block;
+  position: relative;
+  font-size: 12px;
+  line-height: 24px;
+  color: #555;
+  vertical-align: bottom;
+  white-space: nowrap;
+}
+
+.wnav_pop .brands {
+  width: 255px;
+  background: #fff;
+}
+
+.wnav_pop .brands a {
+  float: left;
+  height: 35px;
+  margin: 0 3px 3px 0;
+  width: 69px;
+}
+
+#nav_nanzi_pop {
+  top: 228px;
+  left: 377px;
+  display: none;
+  z-index: 9999;
+}
+
+#nav_nanzi_pop .lv15_cats {
+  padding: 8px 0 13px;
+}
+
+.clfix {
+  zoom: 1;
+}
+
+#nav_nvzi_pop {
+  top: 228px;
+  left: 454px;
+  display: none;
+  z-index: 9999;
+}
+
+#nav_ertong_pop {
+  width: 540px;
+  top: 228px;
+  left: 532px;
+  display: none;
+  z-index: 9999;
+}
+
+#cat_ydxie_pop {
+  top: 228px;
+  left: 326px;
+  display: none;
+  z-index: 9999;
+}
+
+#cat_ydfu_pop {
+  top: 227px;
+  left: 326px;
+  display: none;
+  z-index: 9999;
+}
+
+#cat_paobu_pop {
+  top: 226px;
+  left: 326px;
+  display: none;
+  z-index: 9999;
+}
+
+#cat_lanqiu_pop {
+  top: 225px;
+  left: 326px;
+  display: none;
+  z-index: 9999;
+}
+
+#cat_zuqiu_pop {
+  top: 224px;
+  left: 326px;
+  display: none;
+  z-index: 9999;
+}
+
+#cat_baobao_pop {
+  top: 223px;
+  left: 326px;
+  display: none;
+  z-index: 9999;
+}
+
+#cat_huwai_pop {
+  top: 222px;
+  left: 326px;
+  block: none;
+  z-index: 9999;
+}
+
+.catgory-menu-pannel {
+  height: 385px;
+  width: 320px;
+  position: absolute;
+  display: block;
+  z-index: 9999;
+  display: none;
+}
+
+.category-sub-pannel {
+  height: 385px;
+  overflow: hidden;
+  z-index: 11;
+  background: #fbfbfb;
+  box-shadow: 1px 0 2px #978d8d inset;
+  opacity: .95;
+}
+
+.category-sub-pannel .sub-pannel-ctn {
+  overflow: hidden;
+  width: 280px;
+  margin: 0 20px;
+}
+
+.category-sub-pannel .category-title {
+  position: relative;
+  height: 20px;
+  width: auto;
+  margin: 25px auto 0;
+  border-bottom: 1px solid #000;
+}
+
+.category-sub-pannel .category-label-list {
+  width: auto;
+  margin: 10px 0 0 -1px;
+  overflow: hidden;
+}
+
+.category-sub-pannel .category-label-list a {
+  display: inline-block;
+  float: left;
+  white-space: nowrap;
+  padding: 0 8px;
+  margin-top: 5px;
+  color: #888;
+}
+
+.focus {
+  width: 100%;
+  height: 550px;
+  position: relative;
+  margin: 0 -12%;
+  background: #EEE;
+}
+
+.focus ul {
+  position: absolute;
+  left: -205px;
+  width: 100%;
+}
+
+.focus ul li {
+  margin: 0 auto;
+}
+
+.focus ul li a img {
+  display: block;
+  margin: 0 auto;
 }
 
 .s-rbar-outer {
@@ -640,6 +862,7 @@ ul, li {
 }
 
 .chuang11h1, .chuang11h2, .chuang11h3, .chuang11h4, .chuang11h5 {
+  position: relative;
   width: 100%;
 }
 

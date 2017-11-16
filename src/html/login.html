@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <title>登录页</title>
     <link rel="stylesheet" type="text/css" href="../css/login.css" />
-    <script src="../js/"></script>
+    <script src="../js/jquery-3.2.1.js"></script>
+    <script src="../js/login.js"></script>
 </head>
 <body>
     <div class="AllWrapInside">
@@ -15,7 +16,7 @@
             .RegisterWrap .form table th{ text-align:right;color:#666;width:60px;padding:0;} 
             .head .logo{height:auto;} 
         </style>
-        <form action="post" class="loginform" id="loginform">
+        <form method="post" onsubmit="return checkLogin(this)" class="loginform" id="loginform" >
             <div class="RegisterWrap">
                 <div class="form">
                     <input type="hidden" />
@@ -52,24 +53,23 @@
                                                                     <tr>
                                                                         <th>用户名：</th>
                                                                         <td>
-                                                                            <input type="text" name="login" class="x-input newinputstyle" style="color:#aaa;" id="in_login" value="邮箱/手机/用户名"/>
-                                                                           <a style="margin-left:6px;display:none;color:#aaa" href="//www.s.cn/passport-signup.html">立即注册</a>
+                                                                            <input type="text" name="login"  onfocus="rmDefault(this)" onblur="nameCheck(this)"; class="x-input newinputstyle" style="color:#aaa;" id="in_login" value="邮箱/手机/用户名"/>
+                                                                           <a style="margin-left:6px;display:none;color:#aaa">立即注册</a>
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
                                                                         <th style="padding-top:15px">密　码：</th>
                                                                         <td style="padding-top:15px">
-                                                                            <input  class="x-input newinputstyle" name="passwd" type="password" id="in_passwd">
+                                                                            <input  class="x-input newinputstyle"  onfocus="hiddenError('valierror');" name="passwd" type="password" id="in_passwd">
                                                                         </td>
                                                                     </tr>
                                                                     <tr id="verifyTr">
                                                                         <th style="padding-top:15px">验证码：</th> 
                                                                         <td style="padding-top:15px">
-                                                                            <input class="x-input " size="8" type="text" name="loginverifycode"  id="iptlogin"> 
-                                                                            <span class="verifyCode">
-                                                                                <img src="" border="1" style="">&nbsp;
-                                                                                <a href="">换个图片</a> 
-                                                                            </span> 
+                                                                            <input class="x-input " onblur="validate('yzm')" size="8" type="text" name="loginverifycode"  id="iptlogin"> 
+                                                                            <span id="verifyCode" style="width: 35px;height:22px;">
+                                                                            </span>
+                                                                            <a href="">换个图片</a>  
                                                                         </td> 
                                                                     </tr>
                                                                     <tr> 
@@ -138,6 +138,46 @@
             </div>
         </form>
     </div>
-    
+<script>
+    // 验证码生成
+function createCode(){  
+     code = "";   
+     var codeLength = 4;//验证码的长度  
+     var verifyCode = document.getElementById("verifyCode");   
+     var random = new Array(0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R',  
+     'S','T','U','V','W','X','Y','Z');//随机数  
+     for(var i = 0; i < codeLength; i++) {//循环操作  
+        var index = Math.floor(Math.random()*36);//取得随机数的索引（0~35）  
+        code += random[index];//根据索引取得随机数加到code上  
+       
+    }  
+   
+    verifyCode.innerHTML = code;//把code值赋给验证码 
+
+}
+createCode();
+
+var login = document.querySelector("#fast_login");
+console.log(login);
+function checkLogin(obj){
+    var valierror = document.querySelector("#valierror");
+    var in_login = document.querySelector("#in_login");
+    var in_passwd = document.querySelector("#in_passwd");
+    var inputCode = document.getElementById("iptlogin");
+    if(in_login.value.trim()=='' || in_passwd.value.trim()=='' || iptlogin.value.trim()==''){
+        console.log(in_login.value);
+        valierror.style.display = 'block';
+        valierror.innerHTML="用户名或者密码不能为空";
+        return false;
+    }else
+     return true;
+}
+login.onclick = function(){
+    checkLogin();
+
+}
+
+
+</script>
 </body>
 </html>
