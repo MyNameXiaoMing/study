@@ -1,0 +1,391 @@
+*{margin: 0;padding: 0;}
+a{
+    color:#333; text-decoration:none;
+}
+body{
+    font-size: 12px;
+    color:#333;
+}
+.wrap{
+    width: 80%;margin: 0 auto;
+}
+.n_bar{
+    border:1px solid #e5e5e5;
+    background: #f1f1f1;
+    padding-left: 1em;
+    font-size: 14px;
+    font-weight: 700;
+    height: 30px;
+    line-height: 30px;
+
+    p{
+        display: inline-block;
+        height: 30px;
+        padding: 0 30px 0 0;
+        margin: 0;
+        float: left;
+        background: url('../img/list_icon.png')no-repeat right 0;
+    }
+    span{
+        color:#999;
+        font-size: 12px;
+    }
+    i{
+        color:#c08;
+        padding:0 3px;
+        font-style: normal;
+    }
+}
+
+.n_filterbox{
+    border:1px solid #e5e5e5;
+    border-top:0;
+    margin-bottom: 0;
+    background:#fafafa;
+    height: 100%;
+
+}
+.n_con{
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: -1px;
+    .n_chose{
+        padding: 15px;
+        color:#666;
+        border-bottom:0;
+        margin-bottom: 0px;
+        a{
+            color:#c00;
+            border:1px solid #c00;
+            border-radius:2px;
+            height: 15px;
+            overflow: hidden;
+            vertical-align: middle;
+            display: inline-block;
+            position: relative;
+            margin-right: 5px;
+            padding: 2px 19px 2px 4px;
+
+            h5{
+                font-weight: normal;
+                color:#808080;
+                display: inline;
+                font-size: 12px;
+
+                i{
+                    display: block;
+                    position: absolute;
+                    right: 2px;
+                    top: 3px;
+                    height: 13px;
+                    width: 13px;
+                    overflow: hidden;
+                    background: #c00;
+                    background: url('../img/list_icon.png')no-repeat 0 -43px;
+                }
+            }
+
+
+        }
+        .rechose{
+            color:#808080;
+            padding: 0 0 0 15px;
+            border:0;
+            margin-left: 7px;
+            background: url('../img/list_icon.png')no-repeat 0 -137px;
+        }
+    }
+}
+
+.n_select{
+
+    dl{
+        display: block;
+        padding:12px 110px 4px 70px;
+        border-bottom: 1px dotted #ccc;
+        position: relative;
+        white-space: nowrap;
+        zoom:1;
+
+        dt{
+            display: block;
+            width: 65px;
+            position: absolute;
+            left: 0;
+            top: 12px;
+            text-align: right;
+            color:#888;
+        }
+        
+        dd{
+            width: 110px;
+            height: 23px;
+            float: left;
+            white-space: nowrap;
+        }
+
+        .more_open{
+            position: absolute;
+            top: 11px;
+            right: 58px;
+            color:#666;
+            line-height: 16px;
+            padding: 0 5px 0 20px;
+            background: #eee url('../img/list_icon.png')no-repeat 5px -364px;
+            border:1px solid #ddd;
+            cursor:pointer;
+        }
+
+        .open{
+            padding: 0 15px 0 3px;
+            position: absolute;
+            right: 10px;
+            top: 12px;
+            color: #666;
+            background: url('../img/list_icon.png')no-repeat 100% -338px;
+            cursor:pointer;
+            border-radius:2px;
+            height: 16px;
+            right: 16px;
+        }
+    }
+        
+    #brand_dl{
+        height: 101px;
+        dd{
+             background: url('../img/skin_201201.png')no-repeat -284px -119px;
+            height: 42px;
+            margin: 0 25px 0 0;
+            overflow: hidden;
+            width: 85px;
+            float: left;
+
+            a{
+            height: 32px;
+            float: left;
+            width: 57px;
+            margin: 0;line-height: 8;
+            overflow: hidden;
+            background: url('../img/skin_201201.png')no-repeat;
+            }
+
+            a.nike{
+                background-position:-5px -422px;
+            }
+            a.adi{
+                background-position:-67px -422px;
+            }
+            a.nb{
+                background-position:-5px -498px;
+            }
+            a.anta{
+                background-position:-5px -460px;
+            }
+            a.lining{
+                background-position:-130px -422px;
+            }
+            a.kw{
+                background-position:-67px -460px;
+            }
+            a.puma{
+                background-position:-67px -498px;
+            }
+            a.neo{
+                background-position:-373px -500px;
+            }
+            a.syc{
+                background-position:-373px -536px;
+            }
+            a.rb{
+                background-position:-130px -536px;
+            }
+            a.skq{
+                background-position:-192px -460px;
+            }
+            a.asics{
+                background-position:-56px -714px;
+            }
+            a.kappa{
+                background-position:-130px -460px;
+            }
+            a.disney{
+                background-position:-80px -32px;
+            }
+        }
+    }
+    
+    #f_category_dl{
+        height: 48px;
+    }    
+    
+    #f_sex_dl{
+        height: 20px;
+    }   
+    
+    #f_size_dl{
+        height: 80px;
+    }       
+    
+    #f_price_id_dl{
+        height: 25px;
+    }
+       
+    #f_series_id_dl{
+        height: 25px;
+    }
+
+    #f_class_dl{
+        height: 25px;
+    }
+
+    #f_celebrity_dl{
+        height: 25px;
+    }
+
+    #f_elements_dl{
+        height: 25px;
+    }
+
+    #f_merge_dl{
+         height: 40px;
+    }
+}
+
+#n_select_open,#n_select_close{
+    display: block;
+    background-position: -121px 0;
+    width: 98px;
+    height: 34px;
+    padding-right: 10px;
+    line-height: 28px;
+    color:#999;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    text-decoration:none;
+    margin-top: -1px;
+    background: url('../img/c_o_icon.png')no-repeat;
+}
+#n_select_close{
+    background-position: -121px 0;
+}
+
+.n_desc_page{
+    border:1px solid #dbdbdb;
+    border-top-width:4px;
+    background: #f7f7f7;
+    height: 36px;
+    line-height: 36px;
+    color:#666;
+    padding: 0 5px 0 10px;
+    .desc{
+        float: left;
+        i{
+            float: left;
+        }
+
+        a{
+            display: block;
+            float: left;
+            height: 20px;
+            line-height: 20px;
+            overflow: hidden;
+            color:#666;
+            border-radius:2px;
+            background: #ccc url('../img/list_icon.png')no-repeat 34px -159px;
+            margin: 8px 6px 0 3px;
+            padding: 0 16px 0 7px;
+        }
+    }
+
+    .page{
+        float: right;
+        .select_info{
+            float: left;
+            padding-right: 8px;
+        }
+
+        i{
+            color:#f60;
+            padding: 0 3px;
+        }
+    }
+}
+
+.box10{
+    height: 10px;clear:both;
+    overflow: hidden;
+}
+.box20{
+    height: 20px;clear:both;
+    overflow: hidden;
+}
+
+.product_list{
+    display: block;
+    dl{
+        width: 220px;margin: 20px 11px 10px;
+        border:1px solid #eee;
+        height: 291px;
+        float: left;
+
+        dt{
+            height: 210px;
+            border:0;
+            padding:3px 0 3px;
+            position: relative;
+            img{
+                height: 210px;
+                width: 210px;
+                display: block;
+                border:0;
+            }
+        }
+        
+        dd{
+            z-index:2;
+            margin:0 1px 1px;
+            border-top:1px solid #f3f3f3;
+            height: 55px;
+            position: relative; 
+            a{
+                color:#333;
+                text-decoration:none;
+                cursor:pointer;
+                ul{
+                    height: 105px;
+                    width: 203px;
+                    padding: 5px 5px 5px 10px;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    overflow: hidden;
+                    li{
+                        display: block;
+                        height: 20px;
+                        line-height: 20px;
+                        overflow: hidden;
+                    }
+                    .r3{
+                        color:#999;
+                    }
+                    .r4{
+                        display: none;
+                        color:#555;
+                        padding: 5px 0;
+                        height: auto;
+                    }
+                }
+
+            }
+        }
+        
+
+    }
+}
+
+.page_l{
+    border-top: 1px dotted #ccc;
+    margin-top: 10px;
+    padding-top: 10px;
+    height: 20px;
+}

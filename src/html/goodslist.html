@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>列表页</title>
+    <link rel="stylesheet" type="text/css" href="../css/goodslist.css" />
+    <style type="text/css">
+         .page_l span{display:inline-block;margin:5px;width:40px;line-height:1.8;text-align: center;background-color:#dfdfdf;color:#666;}
+        .page_l span.active{background-color:#fc0;color:#fff;}
+    </style>
+    <script src="../js/jquery-3.2.1.js"></script>
+    <script src="../js/goodslist.js"></script>
+</head>
+<body>
+<div class="wrap">
+    <div class="n_bar">
+        <p>鞋子&nbsp;
+            <span>
+                (共有<i>869</i>个商品)
+            </span>
+        </p>
+    </div>
+    <div class="n_filterbox">
+        <input value="0" type="hidden">
+        <div class="n_con">
+            <div class="n_chose" id="n_chose">
+                "您已选择： "
+                <a href="" id="0c1">
+                    <h5>类型：</h5>
+                    鞋子
+                    <i></i>
+                </a>
+                <a href="" id="0e1">
+                    <h5>适用</h5>
+                    运动休闲
+                    <i></i>
+                </a>
+                <a class="rechose" rel="nofollow">重新筛选
+                </a>
+                <br />
+            </div>
+        </div>
+        <div class="n_select" id="select_dls">
+            <input value="0" type="hidden">
+            <dl id="brand_dl" class="select_dl">
+                <div class="more_open">多选</div>
+                <div class="open" style="">更多</div>
+                <div style="display: none;" class="close">收起</div>
+                <dt><span>品牌：</span></dt>
+                <dd><a class="nike" href=""><i></i></a></dd>
+                <dd><a class="adi" href=""><i></i></a></dd>
+                <dd><a class="nb" href=""><i></i></a></dd>
+                <dd><a class="anta" href=""><i></i></a></dd>
+                <dd><a class="lining" href=""><i></i></a></dd>
+                <dd><a class="kw" href=""><i></i></a></dd>
+                <dd><a class="puma" href=""><i></i></a></dd>
+                <dd><a class="neo" href=""><i></i></a></dd>
+                <dd><a class="syc" href=""><i></i></a></dd>
+                <dd><a class="rb" href=""><i></i></a></dd>
+                <dd><a class="skq" href=""><i></i></a></dd>
+                <dd><a class="asics" href=""><i></i></a></dd>
+                <dd><a class="kappa" href=""><i></i></a></dd>
+                <dd><a class="disney" href=""><i></i></a></dd>
+                <div class="more_open_act" id="brand_div"> 
+                    <i class="more_nosub" style="display: none;">提交</i> 
+                    <i class="more_sub" style="display: none;">提交</i> 
+                    <i class="more_close" style="display: none;">取消</i> 
+                </div>
+            </dl>
+            <input value="1" type="hidden">
+            <dl id="f_category_dl" class="select_dl">
+                <div class="more_open">多选</div>
+                <dt><span>类别：</span></dt>
+                <dd><a href="">跑步鞋<i><span></span></i></a></dd>
+                <dd><a href="">休闲鞋<i><span></span></i></a></dd>
+                <dd><a href="">篮球鞋<i><span></span></i></a></dd>
+                <dd><a href="">板鞋<i><span></span></i></a></dd>
+                <dd><a href="">帆布鞋<i><span></span></i></a></dd>
+                <dd><a href="">凉鞋<i><span></span></i></a></dd>
+                <dd><a href="">赛车鞋<i><span></span></i></a></dd>
+                <dd><a href="">训练鞋<i><span></span></i></a></dd>
+                <dd><a href="">靴子<i><span></span></i></a></dd>
+                <dd><a href="">健步鞋<i><span></span></i></a></dd>
+                <dd><a href="">拖鞋<i><span></span></i></a></dd>
+                <div class="more_open_act" id="f_category_div"> 
+                    <i class="more_nosub" style="display: none;">提交</i> 
+                    <i class="more_sub" style="display: none;">提交</i> 
+                    <i class="more_close" style="display: none;">取消</i> 
+                </div>
+            </dl>
+            <input value="2" type="hidden">
+            <dl id="f_sex_dl" class="select_dl">
+                <div class="more_open">多选</div>
+                <dt><span>性别：</span></dt>
+                <dd><a href="">男<i><span>(359)</span></i></a></dd>
+                <dd><a href="">女<i><span>(299)</span></i></a></dd>
+                <dd><a href="">情侣<i><span>(211)</span></i></a></dd>
+                <dd><a href="">板鞋<i><span></span></i></a></dd>
+                <div class="more_open_act" id="f_category_div"> 
+                    <i class="more_nosub" style="display: none;">提交</i> 
+                    <i class="more_sub" style="display: none;">提交</i> 
+                    <i class="more_close" style="display: none;">取消</i> 
+                </div>
+            </dl>
+            <input value="3" type="hidden">
+            <dl id="f_size_dl" class="select_dl">
+                <div class="more_open">多选</div>
+                <div class="open" style="">更多</div>
+                <div style="display: none;" class="close">收起</div>
+                <dt><span>尺码：</span></dt>
+                <dd><a href="">35<i><span>(111)</span></i></a></dd>
+                <dd><a href="">35.5<i><span>(58)</span></i></a></dd>
+                <dd><a href="">36<i><span>(236)</span></i></a></dd>
+                <dd><a href="">36.5<i><span>(137)</span></i></a></dd>
+                <dd><a href="">37<i><span>(111)</span></i></a></dd>
+                <dd><a href="">37.5<i><span>(58)</span></i></a></dd>
+                <dd><a href="">38<i><span>(236)</span></i></a></dd>
+                <dd><a href="">38.5<i><span>(137)</span></i></a></dd>
+                <dd><a href="">39<i><span>(111)</span></i></a></dd>
+                <dd><a href="">39.5<i><span>(58)</span></i></a></dd>
+                <dd><a href="">40<i><span>(236)</span></i></a></dd>
+                <dd><a href="">40.5<i><span>(137)</span></i></a></dd>
+                <dd><a href="">41<i><span>(111)</span></i></a></dd>
+                <dd><a href="">41.5<i><span>(58)</span></i></a></dd>
+                <dd><a href="">42<i><span>(236)</span></i></a></dd>
+                <dd><a href="">42.5<i><span>(137)</span></i></a></dd>
+                <dd><a href="">43<i><span>(111)</span></i></a></dd>
+                <dd><a href="">43.5<i><span>(58)</span></i></a></dd>
+                <dd><a href="">44<i><span>(236)</span></i></a></dd>
+                <dd><a href="">44.5<i><span>(137)</span></i></a></dd>、
+                <dd><a href="">45<i><span>(137)</span></i></a></dd>
+                <dd><a href="">45.5<i><span>(111)</span></i></a></dd>
+                <dd><a href="">46<i><span>(58)</span></i></a></dd>
+                <dd><a href="">46.5<i><span>(236)</span></i></a></dd>
+                <dd><a href="">47<i><span>(137)</span></i></a></dd>
+                <div class="more_open_act" id="f_size_div"> 
+                    <i class="more_nosub" style="display: none;">提交</i> 
+                    <i class="more_sub" style="display: none;">提交</i> 
+                    <i class="more_close" style="display: none;">取消</i> 
+                </div>
+            </dl>
+            <input value="4" type="hidden">
+            <dl id="f_price_id_dl" class="select_dl">
+                <div class="more_open">多选</div>
+                <div class="open" style="">更多</div>
+                <div style="display: none;" class="close">收起</div>
+                <dt><span>价格：</span></dt>
+                <dd><a href="">0-99元<i><span>(5)</span></i></a></dd>
+                <dd><a href="">100-199元<i><span>(78)</span></i></a></dd>
+                <dd><a href="">200-299元<i><span>(163)</span></i></a></dd>
+                <dd><a href="">300-399元<i><span>(219)</span></i></a></dd>
+                <dd><a href="">400-499元<i><span>(215)</span></i></a></dd>
+                <dd><a href="">500-599元<i><span>(107)</span></i></a></dd>
+                <dd><a href="">600-699元<i><span>(48)</span></i></a></dd>
+                <div class="more_open_act" id="f_price_div"> 
+                    <i class="more_nosub" style="display: none;">提交</i> 
+                    <i class="more_sub" style="display: none;">提交</i> 
+                    <i class="more_close" style="display: none;">取消</i> 
+                </div>
+            </dl>
+            <input value="5" type="hidden">
+            <dl id="f_series_id_dl" class="select_dl">
+                <div class="more_open">多选</div>
+                <div class="open" style="">更多</div>
+                <div style="display: none;" class="close">收起</div>
+                <dt><span>系列：</span></dt>
+                <dd><a href="">AIR MAX<i><span>(19)</span></i></a></dd>
+                <dd><a href="">ROSHERUN<i><span>(5)</span></i></a></dd>
+                <dd><a href="">贝壳头<i><span>(4)</span></i></a></dd>
+                <dd><a href="">AIR FORCE<i><span>(2)</span></i></a></dd>
+                <dd><a href="">AIR MAX<i><span>(1)</span></i></a></dd>
+                <dd><a href="">AIR MAX 90<i><span>(8)</span></i></a></dd>
+                <dd><a href="">all star<i><span>(36)</span></i></a></dd>
+                <dd><a href="">580<i><span>(1)</span></i></a></dd>
+                <div class="more_open_act" id="f_series_div"> 
+                    <i class="more_nosub" style="display: none;">提交</i> 
+                    <i class="more_sub" style="display: none;">提交</i> 
+                    <i class="more_close" style="display: none;">取消</i> 
+                </div>
+            </dl>
+            <input value="6" type="hidden">
+            <dl id="f_class_dl" class="select_dl">
+                <div class="more_open">多选</div>
+                <dt><span>类目：</span></dt>
+                <dd><a href="">运动<i><span>(718)</span></i></a></dd>
+                <dd><a href="">儿童<i><span>(146)</span></i></a></dd>
+                <dd><a href="">男鞋<i><span>(3)</span></i></a></dd>
+                <dd><a href="">女鞋<i><span>(2)</span></i></a></dd>
+                <div class="more_open_act" id="f_class_div"> 
+                    <i class="more_nosub" style="display: none;">提交</i> 
+                    <i class="more_sub" style="display: none;">提交</i> 
+                    <i class="more_close" style="display: none;">取消</i> 
+                </div>
+            </dl>
+            <input value="7" type="hidden">
+            <dl id="f_celebrity_dl" class="select_dl">
+                <div class="more_open">多选</div>
+                <dt><span>代言明星：</span></dt>
+                <dd><a href="">范冰冰<i><span>(1)</span></i></a></dd>
+            </dl>
+            <input value="8" type="hidden">
+            <dl id="f_elements_dl" class="select_dl">
+                <div class="more_open">多选</div>
+                <dt><span>流行元素：</span></dt>
+                <dd><a href="">车缝线<i><span>(20)</span></i></a></dd>
+                <dd><a href="">镂空<i><span>(1)</span></i></a></dd>
+                <dd><a href="">皮革拼接<i><span>(2)</span></i></a></dd>
+                <dd><a href="">品牌LOGO<i><span>(9)</span></i></a></dd>
+                <dd><a href="">撞色<i><span>(6)</span></i></a></dd>
+                <div class="more_open_act" id="f_elements_div"> 
+                    <i class="more_nosub" style="display: none;">提交</i> 
+                    <i class="more_sub" style="display: none;">提交</i> 
+                    <i class="more_close" style="display: none;">取消</i> 
+                </div>
+            </dl>
+            <dl id="f_merge_dl" class="select_dl">
+                <div class="more_open">多选</div>
+                <dt><span>功能/科技: </span></dt>
+                <dd><a href="">透气<i><span>(37)</span></i></a></dd>
+                <dd><a href="">减震<i><span>(39)</span></i></a></dd>
+                <dd><a href="">耐磨<i><span>(25)</span></i></a></dd>
+                <dd><a href="">防滑<i><span>(2)</span></i></a></dd>
+                <dd><a href="">超轻<i><span>(1)</span></i></a></dd>
+                <dd><a href="">保暖<i><span>(2)</span></i></a></dd>
+                <dd><a href="">轻便<i><span>(6)</span></i></a></dd>
+                <dd><a href="">气垫<i><span>(9)</span></i></a></dd>
+                <div class="more_open_act" id="f_merge_div"> 
+                    <i class="more_nosub" style="display: none;">提交</i> 
+                    <i class="more_sub" style="display: none;">提交</i> 
+                    <i class="more_close" style="display: none;">取消</i> 
+                </div>
+            </dl>
+            <div style="position:relative;line-height:0;overflow:hidden;margin-bottom:-1px;margin-bottom:-5px\9"></div>
+        </div>
+    </div>
+    <a href="" id = "n_select_open">展开<i></i></a>
+    <a href="" id = "n_select_close">收起<i></i></a>
+    <div class="box10" id="gallerybar"></div>
+    <div class="n_desc_page">
+        <span class="desc">
+            <i>排序方式：</i>
+            <a href="">价格</a>
+            <a href="">销量</a>
+        </span>
+        <span class="page">
+            <span class="select_info">
+                总共找到
+                <i>868</i>个商品
+            </span>
+        </span>
+    </div>
+    <div class="product_list" style="height: 1900px;"></div>
+      
+    <div class="page_l" style="height:500px;margin-top: 50px;"></div>
+</div>
+</body>
+</html>
