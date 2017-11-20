@@ -4,15 +4,32 @@
     <meta charset="UTF-8" />
     <title>列表页</title>
     <link rel="stylesheet" type="text/css" href="../css/goodslist.css" />
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
     <style type="text/css">
          .page_l span{display:inline-block;margin:5px;width:40px;line-height:1.8;text-align: center;background-color:#dfdfdf;color:#666;}
         .page_l span.active{background-color:#fc0;color:#fff;}
     </style>
     <script src="../js/jquery-3.2.1.js"></script>
+     <script>
+    jQuery(function(){
+        $('#pageHeader').load('header.html #pageheader');
+        $('.goodslist_footer').load('header.html .footer');
+    })
+    </script>
+    <script src="../js/index.js"></script>
+    
+    
+    
+    
+    
     <script src="../js/goodslist.js"></script>
+   
 </head>
 <body>
-<div class="wrap">
+<header id="pageHeader">
+    
+</header>
+<div class="wrap_m">
     <div class="n_bar">
         <p>鞋子&nbsp;
             <span>
@@ -249,9 +266,11 @@
             </span>
         </span>
     </div>
-    <div class="product_list" style="height: 1900px;"></div>
+    <div class="product_list" style="height: 1600px;"></div>
       
-    <div class="page_l" style="height:500px;margin-top: 50px;"></div>
+    <div class="page_l"></div>
 </div>
+<footer class="goodslist_footer"></footer>
+
 </body>
 </html>

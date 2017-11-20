@@ -2,12 +2,13 @@
 * @Author: Marte
 * @Date:   2017-11-12 12:47:25
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-16 14:40:52
+* @Last Modified time: 2017-11-18 15:21:02
 */
+window.onload = function(){
 
-document.addEventListener('DOMContentLoaded',function(){
 
-    //显示隐藏二级菜单
+    console.log(666);
+       //显示隐藏二级菜单
     var lf_cat = document.querySelector(".lf_cat");
     var category = document.querySelector(".category-menu-nav");
 
@@ -17,8 +18,8 @@ document.addEventListener('DOMContentLoaded',function(){
     var nav_nanzi2 = document.querySelector("#nav_nanzi_pop");
     var nav_nvzi2 = document.querySelector("#nav_nvzi_pop");
     var nav_ertong2 = document.querySelector("#nav_ertong_pop");
+    console.log(666);
     lf_cat.onmouseenter = function(){
-        
         console.log(category);
         category.style.display = 'block';
     }
@@ -160,7 +161,10 @@ document.addEventListener('DOMContentLoaded',function(){
     huwaipop.onmouseleave = function(){
         huwaipop.style.display = "none";
     }
-})
+
+
+}
+ 
     
 
    

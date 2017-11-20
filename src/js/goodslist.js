@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-11-17 15:46:29
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-18 11:02:12
+* @Last Modified time: 2017-11-18 16:34:21
 */
 document.addEventListener('DOMContentLoaded',function(){
 
@@ -18,13 +18,15 @@ document.addEventListener('DOMContentLoaded',function(){
         if(xhr.readyState === 4){
             var res = JSON.parse(xhr.responseText);
             console.log(res);
-
-            
             productList.innerHTML = res.data.map(item=>{
+                var imgurl = item.imgurl.slice(2,-2);
+                imgurl = imgurl.split(",");
+                console.log(imgurl);
                 return `<dl id="${item.id}">
                 <dt>
                     <a>
-                        <img src="${item.imgurl}">
+
+                        <img src= "${imgurl}" >
                     </a>
                 </dt>
                 <dd id="${item.id}">

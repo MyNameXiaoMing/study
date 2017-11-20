@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/detailPage.css" />
+    <style type="text/css">
+        .m-sidebar{position: fixed;top: 0;right: 0;background: #000;z-index: 2000;width: 35px;height: 100%;font-size: 12px;color: #fff;}
+        #msg{position:fixed; top:300px; right:35px; z-index:10000; width:1px; height:52px; line-height:52px; font-size:20px; text-align:center; color:#fff; background:#360; display:none;}
+        .cart{color: #fff;text-align:center;line-height: 20px;padding: 200px 0 0 0px;}
+        .cart span{display:block;width:20px;margin:0 auto;}
+        .cart i{width:35px;height:35px;display:block; background:url(car.png) no-repeat;}
+        .orange {
+            color: #fef4e9;
+            border: solid 1px #da7c0c;
+            background: #f78d1d;
+            background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
+            background: -moz-linear-gradient(top,  #faa51a,  #f47a20);
+            filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
+        }
+        .orange:hover {
+            background: #f47c20;
+            background: -webkit-gradient(linear, left top, left bottom, from(#f88e11), to(#f06015));
+            background: -moz-linear-gradient(top,  #f88e11,  #f06015);
+            filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f88e11', endColorstr='#f06015');
+        }
+        .orange:active {
+            color: #fcd3a5;
+            background: -webkit-gradient(linear, left top, left bottom, from(#f47a20), to(#faa51a));
+            background: -moz-linear-gradient(top,  #f47a20,  #faa51a);
+            filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f47a20', endColorstr='#faa51a');
+        }
+        .u-flyer{display: block;width: 50px;height: 50px;border-radius: 50px;position: fixed;z-index: 9999;}
+
+    </style>
+<script src="../js/jquery-1.7.2.min.js"></script>
+ 
+    <script src="../lib/helloweba_com_fly/jquery.fly.min.js"> </script>
+    <script>
+$(function(addcar) {
+    var offset = $("#end").offset();
+    $(".addcar").click(function(event){
+        var addcar = $(this);
+        var img = addcar.parent().find('img').attr('src');
+        var flyer = $('<img class="u-flyer" src="'+img+'">');
+        flyer.fly({
+            start: {
+                left: event.pageX,
+                top: event.pageY
+            },
+            end: {
+                left: offset.left+10,
+                top:offset.top+10,
+                width: 0,
+                height: 0
+            },
+            onEnd: function(){
+                $("#msg").show().animate({width: '150px'}, 100).fadeOut(60100);
+                addcar.css("cursor","default").removeClass('orange').unbind('click');
+                this.destory();
+            }
+        });
+    });
+  
+});
+</script>
+</head>
+
+<body>
+    <div id="scn_pro">
+        <div class="charuguajian">
+            <div id="2999">
+                <div class="Navigation">
+                    "您当前的位置： "
+                    <span>名鞋库</span>
+                    <span>>></span>
+                    <span>运动配件</span>
+                    <span>>></span>
+                    <span>单肩包</span>
+                    <span>>></span>
+                    <span>阿迪达斯</span>
+                    <span>>></span>
+                    <span>阿迪达斯配件</span>
+                    <span class="goodsname"></span>
+                </div>
+            </div>
+        </div>
+        <div class="GoodsInfoWrap">
+            <div class="good-viewer">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td valign="top" width="40%">
+                                <div class="htmleaf-container">
+                                    
+                                    <div class="htmleaf-content">
+                                        <div class="etalage_wrap">
+                                            <ul id="etalage" style="height:430px">
+                                                <li>
+                                                    <img class="etalage_thumb_image main" src="../img/detail/01.jpg" />
+                                                    <img class="etalage_big_image" src="../img/detail/01.jpg"/>
+                                                </li>
+                                                <li>
+                                                    <img class="etalage_thumb_image" src="../img/detail/02.jpg"/>
+                                                    <img class="etalage_big_image" src="../img/detail/02.jpg"/>
+                                                </li>
+                                                <li>
+                                                    <img class="etalage_thumb_image" src="../img/detail/03.jpg"/>
+                                                    <img class="etalage_big_image" src="../img/detail/03.jpg"/>
+                                                </li>
+                                                <li>
+                                                    <img class="etalage_thumb_image" src="../img/detail/04.jpg"/>
+                                                    <img class="etalage_big_image" src="../img/detail/04.jpg"/>
+                                                </li>
+                                                <li>
+                                                    <img class="etalage_thumb_image" src="../img/detail/05.jpg"/>
+                                                    <img class="etalage_big_image" src="../img/detail/05.jpg"/>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </td>
+                            <td valign="top" >
+                                <form action="" id="cart_from" class="goods-action">
+                                    <div "goodnamewarp clearfix">
+                                        <span class="morebrand">
+                                            更多
+                                            <a href="">阿迪达斯</a>
+                                        </span>
+                                        <h1 class="goodsname">adidas阿迪达斯男子女子单肩包2017年新款运动附配件BR5106</h1>
+                                        <div class="sp"></div>
+                                    </div>
+                                    <ul class="goods-price list">
+                                        <li>
+                                            <span>吊&nbsp;&nbsp;牌&nbsp;&nbsp;价：</span>
+                                            <del class="mktprice price_com">￥99.00 </del>
+                                        </li>
+                                        <li>
+                                            <span>  销&nbsp;&nbsp;售&nbsp;&nbsp;价：  </span>
+                                            <span class="price1 salePrice_big"> ￥79.00</span>
+                                              &nbsp;&nbsp;(&nbsp;8.0折&nbsp;)&nbsp;&nbsp; 
+                                            <span class="discount price_com">立省：￥20.00</span>
+                                        </li>
+                                        <li>
+                                            好&nbsp;&nbsp;评&nbsp;&nbsp;度：&nbsp;&nbsp;
+                                            <span class="comCountBar"><i style="width:0%"></i></span>
+                                            &nbsp;&nbsp;(
+                                            <a href="#commentTips" class="comCount">已有0人评论</a>
+                                            )
+                                        </li>
+                                        <li>运&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;费：&nbsp;&nbsp;名鞋库会员满399包邮&nbsp;&nbsp;(&nbsp;不包括货到付款&nbsp;) </li>
+                                        <li style="color:#ff8383"></li>
+                                    </ul>
+                                    <div class="push_sale">
+                                        <div class="sbg">
+                                            <div class="t">促销信息</div>
+                                            <div class="scon"> 299减10 599减20 999减50&nbsp;&nbsp;限购3件 </div>
+                                        </div>
+                                    </div>
+                                    <div class="hightline">
+                                        <div class="heightbox"></div>
+                                        <div class="sp"></div>
+                                        <div class="btnBar">
+                                            <span id="goods_ck_info">
+                                                <span class="spec-tip">您将购买
+                                                    <span class="c_cm"></span>
+                                                    <span class="buynums">1</span>
+                                                    件&nbsp;&nbsp;
+                                                    <span class="buyCm">34</span>
+                                                    码&nbsp;&nbsp;远景灰+黑+白
+                                                </span>
+                                            </span>
+                                            <div class="btnsBox">
+                                            <img class="etalage_thumb_image main" src="../img/detail/01.jpg" style="display: none;" />
+                                                <input type="submit" value="加入购物车" class="addcar orange"/>
+                                                <input type="submit" />
+                                            </div>
+                                            <ul class="fav_ul">
+                                                <li class="star-off">
+                                                    <a href="" id="pro_view_favorite_nologin" class="btn-fav">&nbsp;&nbsp;收藏此商品</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="sp"></div>
+                                        <div class="scn_baozheng server">
+                                            <i>&nbsp;&nbsp;&nbsp;名鞋库客服：</i>
+                                            <span class="scn_p_linee">销售：</span>
+                                            <span class="scn_p_p"><img src="" alt="" id="pro_view_kf_0"/>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                            <span class="scn_p_p">销售：</span>
+                                            <span class="scn_p_p"><img src="" alt="" id="pro_view_kf_0"/>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                        </div>
+                                        <div class="scn_baozheng">
+                                            <i>名鞋库保障：</i>
+                                            &nbsp;
+                                            <img src="" alt="" />
+                                            &nbsp;正品认证&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <img src="" alt="" />
+                                            &nbsp;自由退货&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <img src="" alt="" />
+                                            &nbsp;全场满399免邮
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="m-sidebar">
+                                <div class="cart">
+                                    <i id="end"></i>
+                                    <span>购物车</span>
+                                </div>
+                            </div>
+
+                            <div id="msg">已成功加入购物车！</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <form id="fastbuy-form"></form>
+                <div class="clear"></div>
+                <div>
+                    <div class="goods-detail-tab">
+                        <div class="goodsDetailTab"></div>
+                        <div class="goodsDetailTab"></div>
+                        <div class="goodsDetailTab"></div>
+                        <div class="goodsDetailTab"></div>
+                        <div class="goodsDetailTab"></div>
+                        <div class="goodsDetailTab"></div>
+                        <div class="goodsDetailTab"></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="section pdtdetail">
+                        <a href=""><img src="" alt="" /></a>
+                        <div class="proshow-canshu">  
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+    <script type="text/javascript" src="../js/jqzoom.js"></script>
+    <script type="text/javascript">
+    $("#etalage").zoom({
+        zoom_area_width: 300,
+        autoplay_interval :3000,
+        small_thumbs : 7,
+        autoplay : true
+    });
+    </script>
+</body>
+</html>

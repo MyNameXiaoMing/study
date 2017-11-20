@@ -1,0 +1,32 @@
+body {
+  font-size: 12px;
+}
+
+#scn_pro {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#scn_pro .Navigation {
+  padding: 10px 0;
+  color: #999;
+}
+
+#scn_pro .Navigation span {
+  margin: 0 5px 0 0;
+}
+
+.GoodsInfoWrap {
+  overflow: hidden;
+
+}
+
+.GoodsInfoWrap .etalage_wrap {
+  width: 430px;
+  height: 430px;
+}
+
+.etalage_zoom_area {
+  z-index: 44444;
+  display: block;
+}
